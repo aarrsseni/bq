@@ -1,0 +1,16 @@
+os:
+  - linux
+  - osx
+
+language: java
+install: true
+
+script:
+  - if [ $TRAVIS_OS_NAME == "osx" ]; then
+    chmod +x ./prepare-mac.sh;
+    ./prepare-mac.sh;
+    fi
+#  - if [ $TRAVIS_OS_NAME == "linux" ]; then
+#    chmod +x ./prepare-linux.sh;
+#    ./prepare-linux.sh;
+#    fi
