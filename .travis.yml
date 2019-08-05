@@ -10,7 +10,7 @@ script:
     chmod +x ./prepare-mac.sh;
     ./prepare-mac.sh;
     fi
-#  - if [ $TRAVIS_OS_NAME == "linux" ]; then
-#    chmod +x ./prepare-linux.sh;
-#    ./prepare-linux.sh;
-#    fi
+  - if [ $TRAVIS_OS_NAME == "linux" ]; then
+    chmod +x ./prepare-linux.sh;
+    ./prepare-linux.sh;
+    fi

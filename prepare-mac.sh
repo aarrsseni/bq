@@ -7,11 +7,14 @@ export PATH=/Library/Java/JavaVirtualMachines/graalvm-ce-19.1.1/Contents/Home/bi
 /Library/Java/JavaVirtualMachines/graalvm-ce-19.1.1/Contents/Home/bin/gu install native-image
 mvn clean package
 NAME=$(basename $(find . -type f -name 'bq-*.jar'))
-native-image -H:Name=release-test -jar target/${NAME} -H:Name=release-test
 
 native-image --no-server --report-unsupported-elements-at-runtime --no-fallback \
              --initialize-at-build-time=io.bootique.tools.shell.command.ShellCommand \
              --initialize-at-build-time=io.bootique.command.Command \
              -jar target/${NAME} -H:Name=bq
 
+ls
+
 mvn package -P assembly
+
+cd target ls
