@@ -17,4 +17,5 @@ ls
 
 mvn package -P assembly
 
-cd target ls
+cd target
+ls

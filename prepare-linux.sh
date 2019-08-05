@@ -14,7 +14,7 @@ cd release-deb
 native-image --no-server --report-unsupported-elements-at-runtime --no-fallback \
              --initialize-at-build-time=io.bootique.tools.shell.command.ShellCommand \
              --initialize-at-build-time=io.bootique.command.Command \
-             -jar target/${NAME} -H:Name=bq
+             -jar ../target/${NAME} -H:Name=bq
 
 PACK_NAME=$(ls)
 chmod +x ${PACK_NAME}
