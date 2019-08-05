@@ -22,7 +22,7 @@ mkdir packageroot
 mkdir packageroot/DEBIAN
 touch packageroot/DEBIAN/control
 
-VERSION=$(echo "${NAME%.*}" | cut -d'-' -f 3)
+VERSION=$(echo "${NAME%.*}" | cut -d'-' -f 2)
 
 echo "Package: $PACK_NAME
 Version: $VERSION
